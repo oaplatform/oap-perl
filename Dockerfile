@@ -1,4 +1,4 @@
-FROM perl:5.30.3-threaded-bullseye
+FROM public.ecr.aws/debian/debian:bullseye-slim
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
@@ -6,4 +6,4 @@ RUN apt-get update \
 
 WORKDIR /
 
-CMD ["perl5.30.3","-de0"]
+CMD ["perl","-de0"]
